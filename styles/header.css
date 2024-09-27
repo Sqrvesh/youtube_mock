@@ -62,16 +62,20 @@
     margin-right: 8px;
     border-top-right-radius: 2px;
     border-bottom-left-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-button:hover {
+    background-color: rgb(240, 240, 240);
 }
 
 .search-icon {
     height: 24px;
-    margin-top: 4px;
 }
 
 .voice-search-icon {
     height: 25px;
-    margin-top: 4px;
 }
 
 .voice-search-button {
@@ -80,6 +84,10 @@
     border: none;
     border-radius: 20px;
     background-color: rgb(246, 246, 246);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-section {
@@ -97,22 +105,53 @@
 
 .notifications-icon-container {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .notifications-count {
     position: absolute;
     font-family: Roboto;
-    font-size: 11px;
+    font-size: 10px;
     color: white;
     background-color: rgb(203, 1, 1);
-    padding: 2px 5px 2px 5px;
+    padding: 1px 5px 1px 5px;
     border-radius: 10px;
     top: -2px;
     right: -2px;
 }
 
 .my-channel-profile {
-    height: 30px;
+    height: 32px;
     border-radius: 15px;
     margin-right: 20px;
+}
+
+.tooltip {
+    position: absolute;
+    font-family: Roboto;
+    color: white;
+    background-color: rgb(97, 95, 95, 0.9);
+    padding: 10px 8px 10px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -50px;
+    opacity: 0;
+    pointer-events: none;
+    text-wrap: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.right-section-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.right-section-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
